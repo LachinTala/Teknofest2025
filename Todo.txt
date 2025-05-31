@@ -1,0 +1,16 @@
+1. Backend (Django API)
+Set up Django and Django REST Framework to create a RESTful API.
+The API currently returns a placeholder or simulated AI-generated GIF filename (e.g., "hello.gif").
+Configured the Django backend to allow CORS (Cross-Origin Resource Sharing) so it can communicate with browser extensions.
+2. Frontend (Browser Extension)
+Created a Chrome/Opera-compatible extension with:
+manifest.json defining the extension’s permissions and scripts.
+content.js for injecting JavaScript into web pages.
+The extension: Automatically runs on page load.
+Sends a POST request to the Django backend with a hardcoded caption (e.g., "hello").
+Receives a GIF filename from the backend and attempts to display it in a floating div on the page.
+3.Testing & Debugging
+Verified API functionality using the Django REST Framework’s browsable interface.
+Solved a CORS issue to enable cross-origin communication between YouTube and the backend.
+Confirmed successful fetch communication between the extension and Django.
+Identified and began fixing image path issues (extension was attempting to load hello.gif from the wrong origin, e.g., YouTube).
